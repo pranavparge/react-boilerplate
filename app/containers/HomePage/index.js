@@ -5,11 +5,16 @@
  *
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 
 export default function HomePage() {
+  useEffect(() => {
+    // eslint-disable-next-line no-console
+    fetch('/').then(data => data.json().then(resp => console.log(resp)));
+  }, []);
+
   return (
     <h1>
       <FormattedMessage {...messages.header} />

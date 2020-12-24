@@ -26,6 +26,7 @@ import LanguageProvider from 'containers/LanguageProvider';
 /* eslint-disable import/no-unresolved, import/extensions */
 import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 import 'file-loader?name=.htaccess!./.htaccess';
+import '!file-loader?name=[name].[ext]!./mockServiceWorker.js';
 /* eslint-enable import/no-unresolved, import/extensions */
 
 import configureStore from './configureStore';
@@ -80,4 +81,9 @@ if (!window.Intl) {
 // we do not want it installed
 if (process.env.NODE_ENV === 'production') {
   require('offline-plugin/runtime').install(); // eslint-disable-line global-require
+}
+
+if (process.env.NODE_ENV === 'development') {
+  // eslint-disable-next-line global-require
+  require('./browser');
 }
