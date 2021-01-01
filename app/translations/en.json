@@ -1,1 +1,6 @@
-[]
+{
+  "app.components.Counter.header": "Counter",
+  "app.containers.HomePage.header": "This is the Counter Application!",
+  "app.containers.NotFoundPage.header": "This is the NotFoundPage container!",
+  "app.components.Button": "This is the Button component!"
+}

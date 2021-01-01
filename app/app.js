@@ -83,7 +83,9 @@ if (process.env.NODE_ENV === 'production') {
   require('offline-plugin/runtime').install(); // eslint-disable-line global-require
 }
 
-if (process.env.NODE_ENV === 'development') {
-  // eslint-disable-next-line global-require
-  require('./browser');
-}
+// require('./browser');
+
+// if (process.env.NODE_ENV === 'development') {
+//   // eslint-disable-next-line global-require
+//   require('./browser');
+// }
